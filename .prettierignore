@@ -1,0 +1,24 @@
+# package directories
+node_modules
+
+# Serverless directories
+.serverless
+
+# esbuild directories
+.esbuild
+
+# Serverless DynamoDB Local directories
+.dynamodb/*
+
+# Rest Client directories
+.http
+
+# Environment Files
+.env
+
+# Package Files
+package.json
+package-lock.json
+
+# Generated Files
+src/types/graphql.ts

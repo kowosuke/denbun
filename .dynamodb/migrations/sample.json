@@ -1,0 +1,27 @@
+[
+  {
+    "key1": "001",
+    "key2": "parent",
+    "value": "Hello DynamoDB"
+  },
+  {
+    "key1": "001",
+    "key2": "child#0001",
+    "childValue": "ChildData 001-0001"
+  },
+  {
+    "key1": "001",
+    "key2": "child#0002",
+    "childValue": "ChildData 001-0002"
+  },
+  {
+    "key1": "002",
+    "key2": "parent",
+    "value": "Hello DynamoDB 002"
+  },
+  {
+    "key1": "002",
+    "key2": "child#0001",
+    "childValue": "ChildData 002-0001"
+  }
+]

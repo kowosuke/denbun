@@ -1,0 +1,46 @@
+### データ型の定義
+
+type Sample {
+  key1: ID!
+  key2: String
+  value: String
+  child: [SampleChild]
+}
+
+type SampleConnection {
+  items: [Sample]
+}
+
+type SampleChild {
+  key1: ID!
+  key2: String
+  childValue: String
+}
+
+type HelloLambda {
+  message: String!
+}
+
+input CreateInput {
+  id: ID!
+  value: String
+}
+
+### 操作の定義（ルート型）
+
+# 検索処理
+type Query {
+  hello(id: ID!): Sample
+  helloList: SampleConnection
+  helloLambda(name: String!): HelloLambda
+}
+
+# 更新処理（登録・変更・削除）
+type Mutation {
+  create(input: CreateInput!): Sample
+}
+
+# データの監視
+type Subscription {
+  subscribeToNewSample(id: ID!): Sample @aws_subscribe(mutations: ["create"])
+}

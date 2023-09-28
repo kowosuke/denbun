@@ -1,0 +1,10 @@
+{
+  "version": "2017-02-28",
+  "operation": "Scan",
+  "filter": {
+    "expression": "key2 = :key2",
+    "expressionValues": {
+      ":key2": $util.dynamodb.toDynamoDBJson("parent")
+    }
+  }
+}

@@ -1,0 +1,19 @@
+# package directories
+node_modules
+
+# Serverless directories
+.serverless
+
+# esbuild directories
+.esbuild
+
+# Serverless DynamoDB Local directories
+.dynamodb/*
+!.dynamodb/migrations
+
+# Rest Client directories
+.http/*
+!.http/README.md
+
+# Environment Files
+.env

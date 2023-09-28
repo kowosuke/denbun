@@ -1,0 +1,12 @@
+{
+  "version": "2018-05-29",
+  "operation": "Query",
+  "scanIndexForward": true,
+  "query": {
+    "expression": "key1 = :key1 and begins_with(key2, :key2)",
+    "expressionValues": {
+      ":key1": $util.dynamodb.toStringJson(${ctx.source.key1}),
+      ":key2": $util.dynamodb.toStringJson("child")
+    }
+  }
+}
